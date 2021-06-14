@@ -4,7 +4,19 @@
  */
 package oop.example;
 
+import java.util.Scanner;
+
 public class Ex26 {
+
+    static double calculateMonthsUntilPaidOff(double balance, double APR, double mPay)
+    {
+        APR = APR * 0.01;
+        double dailyRate = APR/365;
+        double Months = -(1/30) * Math.log(1 + balance/mPay * (1 - Math.pow(1 + dailyRate, 30))) / Math.log(1 + dailyRate);
+
+        return Months;
+    }
+
     public static void main(String[] args) {
         //Months to Pay Off a Credit Card
         /*It can take a lot longer to pay off your credit card balance than you might
@@ -29,8 +41,25 @@ public class Ex26 {
         Constraints
             Prompt for the card’s APR. Do the division internally.
             Prompt for the APR as a percentage, not a decimal.
-            Use a function called calculateMonthsUntilPaidOff, which accepts the balance, the APR, and themonthly payment as its arguments and returns the number of months. Don’t access any of thesevalues outside the function.
+            Use a function called calculateMonthsUntilPaidOff, which accepts the balance, the APR,
+            and the monthly payment as its arguments and returns the number of months. Don’t access
+            any of these values outside the function.
             Round fractions of a cent up to the next cent.*/
 
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("What is your balance? ");
+        double balance = input.nextInt();
+
+        System.out.print("What is the APR on the card (as a percent)? ");
+        double APR = input.nextInt();
+
+        System.out.print("What is the monthly payment you can make? ");
+        double mPay = input.nextInt();
+
+        double numOfMonths = calculateMonthsUntilPaidOff(balance, APR, mPay);
+
+
+        System.out.print("It will take you " + numOfMonths + " months to pay off this card.");
     }
 }

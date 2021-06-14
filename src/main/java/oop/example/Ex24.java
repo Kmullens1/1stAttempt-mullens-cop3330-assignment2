@@ -51,11 +51,11 @@ public class Ex24 {
             Implement the program using a function called isAnagram, which takes in two words as its
             arguments and returns true or false. Invoke this function from your main program.
             Check that both words are the same length.*/
-        System.out.print("Enter two strings and I'll tell you if they are anagrams:\nEnter the first string:");
+        System.out.print("Enter two strings and I'll tell you if they are anagrams:\nEnter the first string: ");
         Scanner input = new Scanner(System.in);
         String first = input.nextLine();
 
-        System.out.print("Enter the second string:");
+        System.out.print("Enter the second string: ");
         String second = input.nextLine();
 
         if (isAnagram(first, second))//A function that compares the strings

@@ -13,7 +13,8 @@ public class Ex25 {
             A very weak password contains only numbers and is fewer than eight characters.
             A weak password contains only letters and is fewer than eight characters.
             A strong password contains letters and at least one number and is at least eight characters.
-            A very strong password contains letters, numbers, and special characters and is at least eightcharacters.
+            A very strong password contains letters, numbers, and special characters and is at least eight
+            characters.
         Example Output
             The password '12345' is a very weak password.
             The password 'abcdef' is a weak password.
@@ -21,8 +22,8 @@ public class Ex25 {
             The password '1337h@xor!' is a very strong password.
         Constraints
             Create a passwordValidator function that takes in the password as its argument
-            and returns avalue you can evaluate to determine the password strength. Do not have
-            the function return astring—you may need to support multiple languages in the future.
+            and returns a value you can evaluate to determine the password strength. Do not have
+            the function return a string—you may need to support multiple languages in the future.
             Use a single output statement.*/
     }
 }
