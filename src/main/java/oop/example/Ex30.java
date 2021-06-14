@@ -16,6 +16,13 @@ public class Ex30 {
             12 x 12 = 144
         Constraint
             Use a nested loop to complete this program.*/
+        for(int i = 1; i < 13; i++)
+        {
+            int j = 1;
+            int product = i * j;
+            System.out.print(i + "x" + j + "=" + product);
+            j++;
+        }
 
     }
 }
