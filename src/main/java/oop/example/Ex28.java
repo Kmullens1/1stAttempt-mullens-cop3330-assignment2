@@ -7,6 +7,19 @@ package oop.example;
 import java.util.Scanner;
 
 public class Ex28 {
+    static int calculateSum()
+    {
+        Scanner input = new Scanner(System.in);
+
+        int sum = 0;
+        for(int i = 0; i < 5; i++)
+        {
+            System.out.print("Enter a number: ");
+            sum = sum + input.nextInt();
+        }
+        return sum;
+    }
+
     public static void main(String[] args) {
         //Adding Numbers
         /*In previous programs, you asked the user for repeated input by writing the
@@ -25,14 +38,8 @@ public class Ex28 {
             The prompting must use repetition, such as a counted loop, not three separate prompts.
             Create a flowchart before writing the program.*/
 
-        Scanner input = new Scanner(System.in);
+        int sum = calculateSum();
 
-        int sum = 0;
-        for(int i = 0; i < 5; i++)
-        {
-            System.out.print("Enter a number: ");
-            sum = sum + input.nextInt();
-        }
         System.out.println("The total is " + sum + ".");
     }
 }
