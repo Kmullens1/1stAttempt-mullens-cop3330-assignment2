@@ -20,7 +20,7 @@ public class Ex30 {
         {
             int j = 1;
             int product = i * j;
-            System.out.print(i + "x" + j + "=" + product);
+            System.out.println(i + "x" + j + "=" + product);
             j++;
         }
 
