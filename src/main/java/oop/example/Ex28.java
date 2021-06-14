@@ -4,6 +4,8 @@
  */
 package oop.example;
 
+import java.util.Scanner;
+
 public class Ex28 {
     public static void main(String[] args) {
         //Adding Numbers
@@ -22,5 +24,14 @@ public class Ex28 {
             The prompting must use repetition, such as a counted loop, not three separate prompts.
             Create a flowchart before writing the program.*/
 
+        Scanner input = new Scanner(System.in);
+
+        int sum = 0;
+        for(int i = 0; i < 5; i++)
+        {
+            System.out.print("Enter a number: ");
+            sum = sum + input.nextInt();
+        }
+        System.out.println("The total is " + sum + ".");
     }
 }
