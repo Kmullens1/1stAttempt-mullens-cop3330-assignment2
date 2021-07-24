@@ -8,8 +8,8 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Ex24 {
-    static Boolean isAnagram(String first, String second)
+public class Ex24 { //////////////This is NOT how you create a class in Java////////////
+    public Boolean isAnagram(String first, String second)
     {
         int length1 = first.length();
         int length2 = second.length();
@@ -51,6 +51,7 @@ public class Ex24 {
             Implement the program using a function called isAnagram, which takes in two words as its
             arguments and returns true or false. Invoke this function from your main program.
             Check that both words are the same length.*/
+        Ex24 name = new Ex24();
         System.out.print("Enter two strings and I'll tell you if they are anagrams:\nEnter the first string: ");
         Scanner input = new Scanner(System.in);
         String first = input.nextLine();
@@ -58,7 +59,7 @@ public class Ex24 {
         System.out.print("Enter the second string: ");
         String second = input.nextLine();
 
-        if (isAnagram(first, second))//A function that compares the strings
+        if (name.isAnagram(first, second))//A function that compares the strings
             System.out.println(first + " and " + second + " are anagrams.");
         else
             System.out.println(first + " and " + second + " are not anagrams.");
